@@ -1,0 +1,19 @@
+🔹 List files/folders in current directory by size (descending):
+du -sh * | sort -hr
+du -sh *     — shows size of each item (folder or file) in human-readable format.
+sort -hr     — sorts the output by size, in human-readable and reverse (largest first) order.
+
+🔹 List all subdirectories including hidden files by size:
+du -sh .[!.]* * | sort -hr
+This ensures that hidden files/directories (starting with .) are included.
+
+🔹 List only directories in current path by size:
+du -sh -- */ | sort -hr
+
+🔹 List all files and folders recursively with total size:
+du -ah . | sort -hr | head -n 20
+du -ah . — lists all files and directories recursively.
+head -n 20 — shows top 20 largest.
+
+🔹 Check total size of current directory:
+du -sh .
