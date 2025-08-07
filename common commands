@@ -1,0 +1,1 @@
+scp -P 592 -r kong-log-receiver/ tibuser@10.150.50.89:/home/tibuser/
